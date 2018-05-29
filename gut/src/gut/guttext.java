@@ -5,6 +5,7 @@ public class guttext {
 	 int a;
 	 int b;
 	 int x;
+	 int a1;
  }
  
 }
