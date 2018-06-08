@@ -8,8 +8,8 @@ public class fishes2{
 	
 		fishes.sea();
 		System.out.println();
-	fishes.fresh1();
-	System.out.println();
+
+	
 	fishes.fresh2();
 	
 	

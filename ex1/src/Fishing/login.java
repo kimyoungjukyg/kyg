@@ -4,7 +4,7 @@ import java.util.*;
 
 public class login{
 	
-String necname;
+static String necname;
 int num;
 String name;
 String password;
@@ -13,11 +13,13 @@ String logPassword;
 int k;
 int i;
 int a;
+
 Scanner sc=new Scanner(System.in);
-fishcase fishcase=new fishcase();
-shop shop=new shop();
-logon lo[]=new logon[100];
-void enterShop() {}
+
+
+logon lo[]=new logon[10];
+
+
 
 
 
@@ -45,7 +47,6 @@ void newID() {
 	
 }
 int m=0;
-int t=0;
 
 void logi() {
 	a=0;
@@ -76,23 +77,13 @@ void logi() {
 	a++;
 	}
 	
-	if(name.equals(lo[t++].logID)){
-	t=t;
-	}
-	
-	
 	while(m==0) {	
-	 if(name.equals(lo[t].logID) && !password.equals(lo[t].logPassword)) {
-		System.out.println("Password가 틀렸습니다.");
-		logi();
-	}
-	else if(!name.equals(lo[t].logID) && !password.equals(lo[t].logPassword))
-	{
+	
 	System.out.println("회원이 아닙니다.");
 	System.out.println("메인화면으로 돌아갑니다.");
 	main();
 	System.out.println();
-	}	
+		
 	}
 	}
 	
@@ -117,7 +108,7 @@ void main() {
 	main();
 	}}
 
-void gamem() {
+public void gamem() {
 
 
 	System.out.println("      FishingGame");
@@ -127,17 +118,22 @@ void gamem() {
 	
 	int num2=sc.nextInt();
 	if(num2==1) {
+		game gm=new game();
 		System.out.println("게임을 시작합니다.");
-		
+		gm.stageselect();
 	}else if(num2==2) {
 		System.out.println("상점으로 이동합니다.");
+	necname=lo[a].necname;
+	System.out.println(necname+"님이 상점에 들어왔습니다.");
+	
+		shop shop=new shop();
 		shop.enterShop();
 	}else if(num2==3) {
 	System.out.println(lo[k].necname+"님의 수조관으로 이동합니다.");
 	System.out.println();
-	System.out.println(lo[k].necname+"님의 수조관");
 	System.out.println("=====================");
-	fishcase.fishroom();
+	fishes fishes=new fishes();
+	fishes.fishroom();
 	
 	}else if(num2==4) {
 		

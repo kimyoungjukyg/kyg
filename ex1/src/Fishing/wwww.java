@@ -1,12 +1,15 @@
 package Fishing;
 
-public class wwww extends wwwww{
+public class wwww {
+	 String fishname;
+	 int fishnum;
+	 int fishprice;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		wwwww w=new wwwww();
-		w.sea();
-		
-	}
+public wwww(String fishname,int fishnum,int fishprice) {
+	this.fishname=fishname;
+	this.fishnum=fishnum;
+	this.fishprice=fishprice;
+}
+
 
 }
